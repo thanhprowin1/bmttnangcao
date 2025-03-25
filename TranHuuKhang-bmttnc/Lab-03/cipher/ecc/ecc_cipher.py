@@ -8,8 +8,8 @@ class ECCCipher:
         pass
 
     def generate_keys(self):
-        sk = ecdsa.SigningKey.generate()  # Tạo khóa riêng tư
-        vk = sk.get_verifying_key()       # Lấy khóa công khai từ khóa riêng
+        sk = ecdsa.SigningKey.generate()  
+        vk = sk.get_verifying_key()       
 
         with open('cipher/ecc/keys/privateKey.pem', 'wb') as p:
             p.write(sk.to_pem())
